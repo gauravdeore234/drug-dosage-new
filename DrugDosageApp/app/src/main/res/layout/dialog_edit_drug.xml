@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Drug Name" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etName" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="e.g. Midazolam"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Preparation String" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etPrep" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="e.g. 25 mg in 25 ml NS (0.5 mg/ml)"
+            android:inputType="textMultiLine" android:minLines="2"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Dose Min (unit/kg/hr or unit/hr)" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etDoseMin" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="e.g. 0.2"
+            android:inputType="numberDecimal" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Dose Max (unit/kg/hr or unit/hr)" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etDoseMax" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="e.g. 0.3"
+            android:inputType="numberDecimal" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Syringe Concentration (unit/ml)" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etConcentration" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="e.g. 0.5 for 0.5 mg/ml"
+            android:inputType="numberDecimal" android:layout_marginBottom="12dp"/>
+
+        <CheckBox android:id="@+id/cbWeightDependent" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Weight-dependent dose"
+            android:checked="true" android:layout_marginBottom="4dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="12sp" android:textColor="#888888"
+            android:text="Uncheck for fixed-rate drugs like Vasopressin, NTG where dose does not multiply by weight"/>
+
+    </LinearLayout>
+</ScrollView>
